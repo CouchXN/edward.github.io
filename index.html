@@ -29,7 +29,7 @@
       function showPos(pos) {
         const { latitude, longitude } = pos.coords;
         console.log(longitude.toFixed(2), latitude.toFixed(2));
-        const url = `http://api.map.baidu.com/geocoder?location=${latitude},${longitude}&output=city&key=2tcT7iSw4NDeAsYGsGZHdp2xBzAkeiQh`
+        const url = `https://api.map.baidu.com/geocoder?location=${latitude},${longitude}&output=city&key=2tcT7iSw4NDeAsYGsGZHdp2xBzAkeiQh`
         fetch(url).then(res => {
           console.log(res);
         })
