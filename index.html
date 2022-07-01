@@ -1,7 +1,11 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/zh/editor.html?c=map-polygon
+-->
 <!DOCTYPE html>
 <html lang="zh-CN" style="height: 100%">
   <head>
     <meta charset="utf-8" />
+    <meta name="referrer" content="no-referrer" />
   </head>
   <body style="height: 100%; margin: 0">
     <div id="container" style="height: 100%"></div>
@@ -9,7 +13,7 @@
     <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
     <script
       type="text/javascript"
-      src="https://api.map.baidu.com/api?v=3.0&ak=2tcT7iSw4NDeAsYGsGZHdp2xBzAkeiQh"
+      src="https://api.map.baidu.com/api?v=3.0&ak=8HXyG9hhYCPTfVh1rgKBx1CZZKPm9t6w"
     ></script>
     <script
       type="text/javascript"
@@ -26,26 +30,26 @@
       function showPos(pos) {
         const { latitude, longitude } = pos.coords;
         console.log(longitude.toFixed(2), latitude.toFixed(2));
-        // const url = `https://api.map.baidu.com/geocoder?location=22.75,116&output=json&key=2tcT7iSw4NDeAsYGsGZHdp2xBzAkeiQh`;
-        const url = `https://api.map.baidu.com/geocoder?location=${latitude},${longitude}&output=json&key=2tcT7iSw4NDeAsYGsGZHdp2xBzAkeiQh`;
+        // const url = `https://api.map.baidu.com/geocoder?location=22.75,116&output=json&key=8HXyG9hhYCPTfVh1rgKBx1CZZKPm9t6w`;
+        const url = `https://api.map.baidu.com/geocoder?location=${latitude},${longitude}&output=json&key=8HXyG9hhYCPTfVh1rgKBx1CZZKPm9t6w`;
 
         const option = {
           headers: {
-            accept:
-              'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-            'accept-language': 'zh-CN,zh;q=0.9',
-            'cache-control': 'max-age=0',
-            'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="102", "Google Chrome";v="102"',
-            'sec-ch-ua-mobile': '?0',
-            'sec-ch-ua-platform': '"macOS"',
-            'sec-fetch-dest': 'document',
-            'sec-fetch-mode': 'navigate',
-            'sec-fetch-site': 'none',
-            'sec-fetch-user': '?1',
-            'upgrade-insecure-requests': '1',
+            // accept:
+            //   'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+            // 'accept-language': 'zh-CN,zh;q=0.9',
+            // 'cache-control': 'max-age=0',
+            // 'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="102", "Google Chrome";v="102"',
+            // 'sec-ch-ua-mobile': '?0',
+            // 'sec-ch-ua-platform': '"macOS"',
+            // 'sec-fetch-dest': 'document',
+            // 'sec-fetch-mode': 'navigate',
+            // 'sec-fetch-site': 'none',
+            // 'sec-fetch-user': '?1',
+            // 'upgrade-insecure-requests': '1',
           },
-          referrerPolicy: 'strict-origin-when-cross-origin',
-          body: null,
+          // referrerPolicy: 'strict-origin-when-cross-origin',
+          // body: null,
           method: 'GET',
           mode: 'cors',
           credentials: 'include',
@@ -64,11 +68,11 @@
       }
       getLocation();
 
-      var dom = document.getElementById('container');
-      var myChart = echarts.init(dom, null, {
-        renderer: 'canvas',
-        useDirtyRect: false,
-      });
+      // var dom = document.getElementById('container');
+      // var myChart = echarts.init(dom, null, {
+      //   renderer: 'canvas',
+      //   useDirtyRect: false,
+      // });
       var app = {};
 
       var option;
@@ -651,11 +655,11 @@
         ],
       };
 
-      if (option && typeof option === 'object') {
-        myChart.setOption(option);
-      }
+      // if (option && typeof option === 'object') {
+      //   myChart.setOption(option);
+      // }
 
-      window.addEventListener('resize', myChart.resize);
+      // window.addEventListener('resize', myChart.resize);
     </script>
   </body>
 </html>
